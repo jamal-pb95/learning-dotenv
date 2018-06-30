@@ -1,0 +1,22 @@
+{
+  "name": "simple-login-app-using-node-and-express",
+  "version": "1.0.0",
+  "description": "Simple login app with node+express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamal-pb95/simple-login-app-using-node-and-express.git"
+  },
+  "author": "Jamal Uddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamal-pb95/simple-login-app-using-node-and-express/issues"
+  },
+  "homepage": "https://github.com/jamal-pb95/simple-login-app-using-node-and-express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
