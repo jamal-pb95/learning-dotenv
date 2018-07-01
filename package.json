@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jamal-pb95/simple-login-app-using-node-and-express#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3"
   }
 }
