@@ -1,0 +1,10 @@
+body {
+	background-color: skyblue;
+	font-size: 20px;
+	color: white;
+}
+
+form {
+	width: 960px;
+	margin: 0 auto;
+}

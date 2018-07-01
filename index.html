@@ -2,13 +2,16 @@
 <html>
 <head>
 	<title>Simple Login App</title>
+	<link rel="stylesheet" type="text/css" href="./assets/styles.css">
 </head>
 <body>
 	<h1>Simple Login App using Node + Express</h1>
-	<form action="/" method="POST">
-		<label>Type your name: <input type="taxt" name="name"></label>
-		<button>Submit</button>
+	<form method="POST">
+		<input type="text" name="username"><br>
+		<input type="password" name="password"><br>
+		<input type="submit" name="submit-btn" value="Login">
 	</form>
+
 	
 </body>
 </html>
