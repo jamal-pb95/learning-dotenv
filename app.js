@@ -48,36 +48,39 @@
 // Simple login app
 const express = require('express');
 const bodyParser = require('body-parser');
-// Session
 const sessions = require('express-session');
 let session;
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(sessions({
 	secret: '%^(T**(Y)&^*(&)^*(^(*^*&*^%*&',
 	resave: false,
 	saveUninitialized: true
 }));
 
-app.get('/', (req, res) => {
-	res.sendFile('./index.html', {root: __dirname});
+app.get('/login', (req, res) => {
+	res.sendFile('./assets/login.html', {root: __dirname});
 });
 
-app.post('/', (req, res) => {
+app.post('/login', (req, res) => {
 	// res.end(JSON.stringify(req.body));
 	session = req.session;
 	if(req.body.username === 'admin' && req.body.password === 'admin') {
-		session.id = req.body.username;
+		ssession.uniqueID = req.body.username;
 	}
 	res.redirect('/redirects');
 });
 
 app.get('/redirects', (req, res) => {
 	session = req.session;
-	return session.id ? res.redirect('/admin') : res.end('Who are you?');
+	if(session.uniqueID) {
+		res.redirect('/admin')
+	} else {
+		res.end('Who are you?');
+	}
 });
 
 app.listen(3000, () => console.log('Server start on port 3000...'));
